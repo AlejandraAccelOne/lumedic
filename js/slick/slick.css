@@ -2,6 +2,7 @@
 .slick-slider
 {
     position: relative;
+    outline: none;
 
     display: block;
     box-sizing: border-box;
@@ -37,6 +38,8 @@
     cursor: pointer;
     cursor: hand;
 }
+
+.slick-slide:focus { outline: none; }
 
 .slick-slider .slick-track,
 .slick-slider .slick-list
