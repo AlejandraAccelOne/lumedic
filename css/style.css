@@ -178,11 +178,11 @@ header .overlay {
   margin-top: 50px;
 }
 
-.slider {
+/* .slider {
   background-image: url("../img/slider-bg.jpg");
   height: auto;
   margin-top: 100px;
-}
+} */
 
 .subtitle {
   display: block;
@@ -385,8 +385,8 @@ header .overlay {
   text-align: center;
 }
 
-.card-slider2 {
-  padding: 15px;
+.card-slider {
+  padding: 20px;
 }
 
 .slider-button {
@@ -402,6 +402,15 @@ header .overlay {
   color: #000000;
   margin-bottom: 5px;
   display: block;
+  font-weight: 200;
+}
+.card-content-bold {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 500;
 }
 
 h1.text-rotate {
@@ -498,6 +507,7 @@ h1.text-rotate {
 
 .carousel {
   position: relative;
+  margin-top: 40px;
 }
 
 .carousel:before,
@@ -526,7 +536,7 @@ h1.text-rotate {
 }
 
 .slick-slide {
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .slick-slide img {
@@ -564,12 +574,6 @@ h1.text-rotate {
     rgba(239, 239, 239, 1) 20px,
     rgba(239, 239, 239, 0)
   );
-}
-
-.card-slider {
-  padding: 0 20px;
-  height: 200px !important;
-  margin: 10px;
 }
 
 .slider-button {
