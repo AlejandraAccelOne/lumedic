@@ -600,3 +600,7 @@ section .innerText {
 .white {
   color: #ffffff;
 }
+
+.lumedic-phone-section {
+  height: 800px;
+}
