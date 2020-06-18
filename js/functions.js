@@ -48,3 +48,16 @@ $(".text-rotater").textrotator({
   });
   
   
+//
+// ScrollMagic
+//
+  	// init controller
+	var controller = new ScrollMagic.Controller();
+
+	// build scene
+	var scene = new ScrollMagic.Scene(
+      {triggerElement: "#lumedic-phone"})
+      .setClassToggle('#lumedic-phone .innerText','white')
+      .addTo(controller);
+
+
