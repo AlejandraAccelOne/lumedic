@@ -13,10 +13,11 @@
   $('.carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+  //  autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
     dots: false,
+    centerMode: true,
 
     // responsive: [{
     //   breakpoint: 1024,
