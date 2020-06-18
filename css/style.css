@@ -513,7 +513,7 @@ h1.text-rotate {
   padding: 20px;
   background-color: #ffffff;
   margin: 10px;
-  height: 350px;
+  height: 250px;
 }
 
 .carousel {
@@ -638,4 +638,34 @@ section .innerText {
 
 .slick-current .slider-button {
   border-bottom: 2px solid #093170;
+}
+/* 
+.carousel .slick-slide {
+  width: 100%;
+} */
+
+/* .featured {
+  width: 400px;
+} */
+
+.carousel.slick-slider {
+  width: 100% !important;
+}
+
+.slick-active .card-slider {
+  background-color: #f6f6f6;
+}
+
+.slick-active .card-slider .card-content,
+.slick-active .card-slider .card-content-bold {
+  color: #788288;
+}
+
+.slick-active.slick-current .card-slider {
+  background-color: #ffffff;
+}
+
+.slick-active.slick-current .card-slider .card-content,
+.slick-active.slick-current .card-slider .card-content-bold {
+  color: #000000;
 }

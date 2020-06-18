@@ -29,6 +29,7 @@
     dots: false,
     centerMode: true,
     focusOnSelect: true
+  //,  variableWidth: true
   });
   
 
