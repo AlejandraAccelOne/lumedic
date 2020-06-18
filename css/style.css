@@ -197,6 +197,12 @@ header .overlay {
   color: #302c29;
 }
 
+.title-card {
+  font-size: 16px;
+  border-bottom: 2px solid #093170;
+  margin: 15px 0;
+}
+
 .card.icon {
   background: transparent;
   -webkit-box-shadow: none;
@@ -385,8 +391,11 @@ header .overlay {
   text-align: center;
 }
 
-.card-slider {
+.card-slider,
+.card-slider-mobile {
   padding: 20px;
+  background-color: #ffffff;
+  margin: 20px;
 }
 
 .slider-button {
@@ -603,4 +612,24 @@ section .innerText {
 
 .white {
   color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .only-mobile {
+    display: none;
+  }
+
+  .only-large {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .only-mobile {
+    display: block;
+  }
+
+  .only-large {
+    display: none;
+  }
 }
