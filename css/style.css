@@ -467,10 +467,6 @@ h1.text-rotate {
   background-color: #ffffff;
 }
 .list-ic.horizontal li::before {
-  /* top: 0.9em;
-	  left: -25px;
-	  width: 4em;
-	  height: 0.2em; */
   top: 0.55em;
   left: -24px;
   width: 2.5em;
@@ -600,15 +596,6 @@ section .inner {
   max-width: 85%;
 }
 
-/* Content of the following sections aligned next to the iphone */
-section .innerText {
-  position: absolute;
-  top: 250px;
-  left: 20%;
-  transform: translate(-100px, -50%);
-  text-align: left;
-}
-
 .white {
   color: #ffffff;
 }
@@ -640,14 +627,6 @@ section .innerText {
 .slick-current .slider-button {
   border-bottom: 2px solid #093170;
 }
-/* 
-.carousel .slick-slide {
-  width: 100%;
-} */
-
-/* .featured {
-  width: 400px;
-} */
 
 .carousel.slick-slider {
   width: 100% !important;
@@ -691,4 +670,58 @@ h2.confidence {
 
 .col-12 {
   text-align: center;
+}
+
+.textContainer {
+  text-align: center;
+}
+
+/* Content of the following sections aligned next to the iphone */
+
+@media only screen and (min-width: 768px) {
+  section .innerText {
+    /* position: absolute;
+		  top: 250px;
+		  left: 20%;
+		  transform: translate(-100px, -50%); */
+    text-align: left;
+    position: absolute;
+    margin-top: 0px;
+    width: 50%;
+    margin-left: 10%;
+  }
+
+  .lumedic-phone-section {
+    background: url("../img/slider-bg.jpg");
+    min-height: 650px;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section .innerText {
+    /* position: absolute;
+		  top: 250px;
+		  left: 20%;
+		  transform: translate(-100px, -50%); */
+    text-align: center;
+    margin: 30px;
+
+    position: absolute;
+    margin-top: -40px;
+  }
+
+  #mainTitle {
+    font-weight: 500;
+    font-size: 1.9rem;
+  }
+  h2.confidence {
+    font-size: 1.3rem;
+  }
+
+  .lumedic-phone-section {
+    background: url("../img/slider-bg-mobile.jpg");
+    min-height: 360px;
+    background-size: cover;
+  }
 }
