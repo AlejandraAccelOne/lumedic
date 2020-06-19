@@ -137,10 +137,6 @@ header .overlay {
   width: 60%;
 }
 
-.confidence {
-  margin-top: 50px;
-}
-
 .confidence h1 {
   font-size: 25px;
   font-weight: bold;
@@ -468,6 +464,7 @@ h1.text-rotate {
 }
 .list-ic.horizontal li span {
   margin: 0 1em;
+  background-color: #ffffff;
 }
 .list-ic.horizontal li::before {
   /* top: 0.9em;
@@ -606,8 +603,8 @@ section .inner {
 /* Content of the following sections aligned next to the iphone */
 section .innerText {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 250px;
+  left: 20%;
   transform: translate(-100px, -50%);
   text-align: left;
 }
@@ -672,4 +669,26 @@ section .innerText {
 .slick-active.slick-current .card-slider .card-content,
 .slick-active.slick-current .card-slider .card-content-bold {
   color: #000000;
+}
+
+#mainTitle {
+  font-weight: 500;
+}
+
+.confidence.top {
+  margin-top: 150px;
+}
+
+h2.confidence {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.list-ic.horizontal {
+  margin: 20px 0 0 -20px;
+  padding: 0;
+}
+
+.col-12 {
+  text-align: center;
 }
