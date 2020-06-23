@@ -79,9 +79,9 @@ $(document).ready(function(){
 
   var texts = [
     'Clinical Guidance',
+    'Lumedic.ID Technology Platform',
     'Integrated Solution Management',
-    'System Integration & Engineering',
-    'Lumedic.ID Technology Platform'
+    'System Integration & Engineering'
   ];
 
   var controller = new ScrollMagic.Controller();
