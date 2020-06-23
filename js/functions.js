@@ -137,3 +137,60 @@ $(document).ready(function(){
   .addTo(controller);
   
 });
+
+
+
+$(document).ready(function(){
+  $("#name").change(function(){
+    let val = $(this).val();
+    if(val == '') {
+      $(this).addClass("required");
+    }else{
+      $(this).removeClass("required");
+    }
+  });
+
+  $("#email").change(function(){
+    let val = $(this).val();
+    if(val == '') {
+      $(this).addClass("required");
+    }else{
+      $(this).removeClass("required");
+    }
+  });
+
+  $(".lumedic-contact-form").submit(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    let error = false;
+    let name = $("#name").val();
+    if(name == '') {
+      $("#name").addClass("required");
+      error = true;
+    }
+    let email = $("#email").val();
+    if(email == '') {
+      $("#email").addClass("required");
+      error = true;
+    }
+
+    if(error){
+      return false;
+    }
+
+    $.ajax({
+        data: $(this).serialize(),
+        type: "POST",
+        url: 'mailer.php', 
+        success: function(data) {
+          $(".message").show(); 
+					$(".btn-send").hide();
+        },
+        error: function (data) {
+          console.log(data);
+        }
+    });
+    return false;
+  });
+});  
