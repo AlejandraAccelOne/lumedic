@@ -39,7 +39,7 @@ try {
 
     //Recipients
     $mail->setFrom('diego@qwavee.com', 'Lumedic Contact Form');
-    $mail->addAddress('diego@qwavee.com', 'Diego Rodriguez');     // Add a recipient
+    $mail->addAddress('communications@bluetreenetwork.com', 'Communications Blue Tree Network');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
