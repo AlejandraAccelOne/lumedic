@@ -723,9 +723,28 @@ h2.confidence {
   font-weight: lighter;
   text-align: center;
 }
+
+/* Content of the following sections aligned next to the iphone
+
+@media only screen and (min-width: 1024px) {
+  section .innerText {
+    text-align: left;
+    position: absolute;
+    margin-top: 0px;
+    width: 50%;
+    margin-left: 10%;
+  }
+
+  .lumedic-phone-section {
+    background: url("../img/slider-bg.jpg");
+    height: 650px;
+    min-height: 650px;
+    background-size: contain;
+  }
+} */
 /* Content of the following sections aligned next to the iphone */
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
   section .innerText {
     /* position: absolute;
 		  top: 250px;
@@ -740,12 +759,42 @@ h2.confidence {
 
   .lumedic-phone-section {
     background: url("../img/slider-bg.jpg");
-    min-height: 650px;
-    background-size: contain;
+    height: 800xpx;
+    min-height: 800px;
+    background-size: cover;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  section .innerText {
+    /* position: absolute;
+		  top: 250px;
+		  left: 20%;
+		  transform: translate(-100px, -50%); */
+    text-align: left;
+    position: absolute;
+    margin-top: 0px;
+    width: 50%;
+    margin-left: 10%;
+  }
+
+  .slider-button {
+    margin-top: 20px;
+  }
+
+  .lumedic-phone-section {
+    background: url("../img/slider-bg.jpg") bottom right no-repeat;
+    height: 576px;
+    min-height: 576px;
+    background-size: contain;
+  }
+
+  .step-sliders .slick-slide {
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
   section .innerText {
     /* position: absolute;
 		  top: 250px;
@@ -755,21 +804,30 @@ h2.confidence {
     margin: 30px;
 
     position: absolute;
-    margin-top: -40px;
+    margin-top: 40px;
   }
 
-  #mainTitle {
+  /* .slick-slide {
+    margin: 10px !important;
+  }
+  .slick-slide.slick-current {
+    width: auto !important;
+  } */
+
+  /* #mainTitle {
     font-weight: 500;
     font-size: 1.9rem;
   }
   h2.confidence {
     font-size: 1.3rem;
-  }
+  } */
 
   .lumedic-phone-section {
-    background: url("../img/slider-bg.jpg");
-    min-height: 360px;
-    background-size: contain;
+    background: url("../img/slider-bg-mobile.jpg") bottom right no-repeat;
+    /* min-height: 360px; */
+    min-width: 768px;
+    background-size: cover;
+    height: 1358px;
   }
 }
 
@@ -797,7 +855,7 @@ h2.confidence {
   .lumedic-phone-section {
     background: url("../img/slider-bg-mobile.jpg");
     min-height: 360px;
-    background-size: contain;
+    background-size: cover;
   }
 }
 
@@ -850,4 +908,20 @@ h2.confidence {
 
 .roadmap-title {
   margin: 20px 0 40px;
+}
+
+.card-slider-mobile {
+  margin: 20px 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+.step-sliders .slick-slide.slick-current.slick-center {
+  height: 100%;
+  background-color: transparent !important;
+  /* padding: 10px; */
+}
+
+.red {
+  color: #c00;
 }

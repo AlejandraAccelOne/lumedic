@@ -20,7 +20,8 @@
     dots: false,
     centerMode: true,
     loop: false,
-    infinite: false
+    infinite: false,
+    
   })
   // .on('setPosition', function (event, slick) { 
   //   $('.carousel').$slides.css('height', $('.carousel').$slideTrack.height() + 'px');
