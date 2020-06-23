@@ -21,7 +21,7 @@
     centerMode: true,
     loop: false,
     infinite: false,
-    
+    asNavFor: '.slider-nav',
   })
   // .on('setPosition', function (event, slick) { 
   //   $('.carousel').$slides.css('height', $('.carousel').$slideTrack.height() + 'px');
@@ -36,7 +36,7 @@
     asNavFor: '.carousel',
     arrows: false,
     dots: false,
-    centerMode: true,
+    centerMode: false,
     focusOnSelect: true
   //,  variableWidth: true
   });
