@@ -97,3 +97,35 @@ $(document).ready(function(){
   .addTo(controller);
   
 });
+
+
+
+$(document).ready(function(){
+  $(".lumedic-contact-form").submit(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    debugger
+    let name = $("#name").val();
+    if(name == '') {
+      $("#name").addClass("required");
+      return false;
+    }
+    $.ajax({
+        data: $(this).serialize(),
+        type: "POST",
+        url: 'mailer.php', 
+        success: function(data) {
+            if( data['error'] == false) {
+                var msg = 'We got your flag. Our moderators will now look into it. You may close the window now!';
+                $('#spc-comment-flag-response').html(msg);
+            }else {
+                $('#spc-comment-flag-response').html(data);
+            }   
+        },
+        error: function (data) {
+          console.log(data);
+        }
+    });
+    return false;
+  });
+});  
