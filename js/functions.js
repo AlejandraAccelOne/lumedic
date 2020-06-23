@@ -1,27 +1,17 @@
-  // $(".text-rotater").textrotator({
-  //   animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-  //   separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-  //   speed: 2000 // How many milliseconds until the next word show.
-  // });
-
-  // $(".rotate").textrotator({
-  //   animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-  //   separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-  //   speed: 2000 // How many milliseconds until the next word show.
-  // });
+ 
+$(document).ready(function(){
 
   $('.carousel').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-  //  autoplay: true,
     autoplaySpeed: 2000,
     initialSlide: 1,
     arrows: false,
     dots: false,
-    centerMode: false,
+    centerMode: true,
     loop: false,
     infinite: false,
-    focusOnSelect:true
+    focusOnSelect:true,
   });
 
   
@@ -33,45 +23,45 @@
     arrows: false,
     dots: false,
     centerMode: false,
-    focusOnSelect: true
-  //,  variableWidth: true
+    focusOnSelect: true,
+    loop: false,
+    // infinite: false
+  });
+
+  // Click on Card-Slider and refresh nav
+  $('.slick-slide').click(function(event) {
+    $('.slick-slide.slick-current').removeClass('slick-current');
+    $(
+      $('.slick-slide')[$(this).data('thumb')]
+    ).addClass('slick-current');
+  });
+
+  //when the slick slide initializes we want to set all of our slides to the same height
+  $('.carousel').on('setPosition', function () {
+    jbResizeSlider();
   });
   
+  //we need to maintain a set height when a resize event occurs.
+  //Some events will through a resize trigger: $(window).trigger('resize');
+  $(window).on('resize', function(e) {
+    jbResizeSlider();
+  });
+  
+  //since multiple events can trigger a slider adjustment, we will control that adjustment here
+  function jbResizeSlider(){
+    $slickSlider = $('.carousel');
+    $slickSlider.find('.slick-slide').height('auto');
+  
+    var slickTrack = $slickSlider.find('.slick-track');
+    var slickTrackHeight = $(slickTrack).height()-50;
+  
+    $slickSlider.find('.slick-slide').css('height', slickTrackHeight + 'px');
+  }
 
-//when the slick slide initializes we want to set all of our slides to the same height
-$('.carousel').on('setPosition', function () {
-	jbResizeSlider();
-});
- 
-//we need to maintain a set height when a resize event occurs.
-//Some events will through a resize trigger: $(window).trigger('resize');
-$(window).on('resize', function(e) {
-	jbResizeSlider();
-});
- 
-//since multiple events can trigger a slider adjustment, we will control that adjustment here
-function jbResizeSlider(){
-	$slickSlider = $('.carousel');
-	$slickSlider.find('.slick-slide').height('auto');
- 
-	var slickTrack = $slickSlider.find('.slick-track');
-  var slickTrackHeight = $(slickTrack).height()-50;
- 
-	$slickSlider.find('.slick-slide').css('height', slickTrackHeight + 'px');
-}
+  // Init
+  $($('.card-slider')[1]).trigger('click');
 
-  // $('.slider').slick({
-  //   autoplay: false,
-  //   dots: false,
-  //   infinite: false,
-  //   arrows: false,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 2,
-  //   rows: 0
-  // })
-  // .on('setPosition', function (event, slick) {
-  //   slick.$slides.css('height', slick.$slideTrack.height() + 'px');
-  // });
+});
 
 $(document).ready(function(){
 
