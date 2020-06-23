@@ -145,26 +145,51 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+  $("#name").change(function(){
+    let val = $(this).val();
+    if(val == '') {
+      $(this).addClass("required");
+    }else{
+      $(this).removeClass("required");
+    }
+  });
+
+  $("#email").change(function(){
+    let val = $(this).val();
+    if(val == '') {
+      $(this).addClass("required");
+    }else{
+      $(this).removeClass("required");
+    }
+  });
+
   $(".lumedic-contact-form").submit(function(e) {
     e.preventDefault();
     e.stopPropagation();
-    debugger
+
+    let error = false;
     let name = $("#name").val();
     if(name == '') {
       $("#name").addClass("required");
+      error = true;
+    }
+    let email = $("#email").val();
+    if(email == '') {
+      $("#email").addClass("required");
+      error = true;
+    }
+
+    if(error){
       return false;
     }
+
     $.ajax({
         data: $(this).serialize(),
         type: "POST",
         url: 'mailer.php', 
         success: function(data) {
-            if( data['error'] == false) {
-                var msg = 'We got your flag. Our moderators will now look into it. You may close the window now!';
-                $('#spc-comment-flag-response').html(msg);
-            }else {
-                $('#spc-comment-flag-response').html(data);
-            }   
+          $(".message").show(); 
+					$(".btn-send").hide();
         },
         error: function (data) {
           console.log(data);
