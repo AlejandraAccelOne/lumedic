@@ -18,15 +18,11 @@
     initialSlide: 1,
     arrows: false,
     dots: false,
-    centerMode: true,
+    centerMode: false,
     loop: false,
     infinite: false,
-    asNavFor: '.slider-nav',
-  })
-  // .on('setPosition', function (event, slick) { 
-  //   $('.carousel').$slides.css('height', $('.carousel').$slideTrack.height() + 'px');
-  // })
-  ;
+    focusOnSelect:true
+  });
 
   
   $('.slider-nav').slick({
