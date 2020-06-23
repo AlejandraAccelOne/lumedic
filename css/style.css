@@ -670,9 +670,9 @@ section .inner {
   background-color: #ffffff;
 }
 
-.slick-slide.slick-current.slick-active {
+/* .slick-slide.slick-current.slick-active {
   background-color: #ffffff;
-}
+} */
 
 .slick-active .card-slider .card-content,
 .slick-active .card-slider .card-content-bold {
@@ -779,7 +779,7 @@ h2.confidence {
   }
 
   .slider-button {
-    margin-top: 20px;
+    margin: 20px 20px;
   }
 
   .lumedic-phone-section {
@@ -924,4 +924,8 @@ h2.confidence {
 
 .red {
   color: #c00;
+}
+
+.slick-slide.slick-center {
+  background-color: white;
 }

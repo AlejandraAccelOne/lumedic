@@ -29,10 +29,10 @@ $(document).ready(function(){
   });
 
   // Click on Card-Slider and refresh nav
-  $('.slick-slide').click(function(event) {
-    $('.slick-slide.slick-current').removeClass('slick-current');
+  $('.carousel .slick-slide').click(function(event) {
+    $('.slider-nav .slick-slide.slick-current').removeClass('slick-current');
     $(
-      $('.slick-slide')[$(this).data('thumb')]
+      $('.slider-nav .slick-slide')[$(this).data('thumb')]
     ).addClass('slick-current');
   });
 
