@@ -831,16 +831,16 @@ h2.confidence {
 @media only screen and (max-width: 425px) {
   .innerText {
     position: relative;
-    top: 100px;
+    top: 80px;
     margin: 30px;
   }
 
   #mainTitle {
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   h2.confidence {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .lumedic-phone-section {
@@ -865,6 +865,8 @@ h2.confidence {
   }
   .list-ic.slick-slider {
     display: inline-block;
+    margin: 20px 0;
+    padding: 0;
   }
 }
 
