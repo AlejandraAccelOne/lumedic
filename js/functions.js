@@ -72,9 +72,9 @@ $(document).ready(function(){
     initialSlide: 1,
     arrows: false,
     dots: false,
-    centerMode: true,
-    loop: false,
-    infinite: false,
+    centerMode: false,
+    loop: true,
+    infinite: true,
     focusOnSelect:true,
   });
 
@@ -88,7 +88,8 @@ $(document).ready(function(){
     dots: false,
     centerMode: false,
     focusOnSelect: true,
-    loop: false,
+    loop: true,
+    infinite: true,
   });
 
 

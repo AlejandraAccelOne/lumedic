@@ -567,7 +567,7 @@ h1.text-rotate {
   background: linear-gradient(to left, rgba(0, 0, 0, 1) 20px, rgba(0, 0, 0, 0));
 }
 
-.slick-slide {
+.slider-cards-section .slick-slide {
   padding: 20px;
 }
 
@@ -902,7 +902,7 @@ h2.confidence {
   /* padding: 10px; */
 }
 
-.slick-slide {
+.slider-cards-section .slick-slide {
   background-color: #f6f6f6;
   margin: 20px;
 }
@@ -912,7 +912,7 @@ h2.confidence {
   margin: 20px;
 }
 
-.slick-slide.slick-current.slick-center {
+.slider-cards-section .slick-slide.slick-current.slick-center {
   height: 100%;
   background-color: #ffffff !important;
   /* padding: 10px; */
@@ -940,4 +940,33 @@ h2.confidence {
 
 .slick-slide.slick-center {
   background-color: white;
+}
+
+.list-ic .slick-slide {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  width: auto !important;
+}
+
+.list-ic .slick-slide.slick-current.slick-active {
+  width: auto !important;
+}
+
+.list-ic .slick-slide {
+  margin: 0;
+}
+
+.list-ic .slick-slide.slick-current.slick-active span {
+  background-color: #302c29;
+}
+
+.lumedic-phone-slider .slick-slide {
+  background-color: transparent;
+}
+.lumedic-phone-slider.slick-slider
+  .slick-list
+  .slick-track
+  .slick-slide.slick-current.slick-center {
+  background-color: transparent;
 }
