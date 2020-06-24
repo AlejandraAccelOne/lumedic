@@ -724,32 +724,8 @@ h2.confidence {
   text-align: center;
 }
 
-/* Content of the following sections aligned next to the iphone
-
-@media only screen and (min-width: 1024px) {
-  section .innerText {
-    text-align: left;
-    position: absolute;
-    margin-top: 0px;
-    width: 50%;
-    margin-left: 10%;
-  }
-
-  .lumedic-phone-section {
-    background: url("../img/slider-bg.jpg");
-    height: 650px;
-    min-height: 650px;
-    background-size: contain;
-  }
-} */
-/* Content of the following sections aligned next to the iphone */
-
 @media only screen and (min-width: 1025px) {
-  section .innerText {
-    /* position: absolute;
-		  top: 250px;
-		  left: 20%;
-		  transform: translate(-100px, -50%); */
+  .innerText {
     text-align: left;
     position: absolute;
     margin-top: 0px;
@@ -766,7 +742,7 @@ h2.confidence {
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
-  section .innerText {
+  .innerText {
     text-align: left;
     position: absolute;
     margin-top: 0px;
@@ -807,58 +783,61 @@ h2.confidence {
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
-  section .innerText {
-    /* position: absolute;
-		  top: 250px;
-		  left: 20%;
-		  transform: translate(-100px, -50%); */
-    text-align: center;
+  .innerText {
+    position: relative;
+    top: 200px;
     margin: 30px;
-
-    position: absolute;
-    margin-top: 40px;
   }
 
-  /* .slick-slide {
-    margin: 10px !important;
-  }
-  .slick-slide.slick-current {
+  .list-ic .slick-slide {
+    background-color: transparent;
     width: auto !important;
-  } */
-
-  /* #mainTitle {
-    font-weight: 500;
-    font-size: 1.9rem;
+    margin-left: -5px !important;
   }
-  h2.confidence {
-    font-size: 1.3rem;
-  } */
 
   .lumedic-phone-section {
     background: url("../img/slider-bg-mobile.jpg") bottom right no-repeat;
-    /* min-height: 360px; */
     min-width: 768px;
     background-size: cover;
     height: 1358px;
   }
+  .lumedic-phone-section {
+    background: url("../img/slider-bg-mobile.jpg");
+    min-height: 360px;
+    background-size: cover;
+  }
+
+  .lumedic-phone-slider .slick-slide {
+    width: 365px;
+  }
+  .lumedic-phone-slider.slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide.slick-current.slick-center {
+    width: 365px;
+  }
+
+  .lumedic-phone-slider .slick-track {
+    width: 365px;
+    height: 75px;
+  }
+  .list-ic.slick-slider {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 425px) {
-  section .innerText {
-    /* position: absolute;
-		  top: 250px;
-		  left: 20%;
-		  transform: translate(-100px, -50%); */
-    text-align: center;
+  .innerText {
+    position: relative;
+    top: 100px;
     margin: 30px;
-
-    position: absolute;
-    margin-top: -40px;
   }
 
   #mainTitle {
     font-weight: 500;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
   h2.confidence {
     font-size: 1.3rem;
@@ -869,37 +848,33 @@ h2.confidence {
     min-height: 360px;
     background-size: cover;
   }
+
+  .lumedic-phone-slider .slick-slide {
+    width: 365px;
+  }
+  .lumedic-phone-slider.slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide.slick-current.slick-center {
+    width: 365px;
+  }
+
+  .lumedic-phone-slider .slick-track {
+    width: 365px;
+    height: 75px;
+  }
+  .list-ic.slick-slider {
+    display: inline-block;
+  }
 }
 
-/* .slick-track {
-  display: flex !important;
-  justify-items: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-.card-slider {
-  display: flex; 
-  flex: 1 1 100%;
-  margin: 10px;
-  width: 60%;
-} */
 .prov-icon {
   text-align: center;
 }
 
-/* .slick-track {
-  display: flex !important;
-}
-
-.slick-slide {
-  height: inherit !important;
-  width: 33%;
-} */
-
 .slide {
   height: 100%;
   background-color: #ccc;
-  /* padding: 10px; */
 }
 
 .slider-cards-section .slick-slide {
@@ -915,7 +890,6 @@ h2.confidence {
 .slider-cards-section .slick-slide.slick-current.slick-center {
   height: 100%;
   background-color: #ffffff !important;
-  /* padding: 10px; */
 }
 
 .roadmap-title {
@@ -931,7 +905,6 @@ h2.confidence {
 .step-sliders .slick-slide.slick-current.slick-center {
   height: 100%;
   background-color: transparent !important;
-  /* padding: 10px; */
 }
 
 .red {
