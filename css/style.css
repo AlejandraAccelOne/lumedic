@@ -767,10 +767,6 @@ h2.confidence {
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   section .innerText {
-    /* position: absolute;
-		  top: 250px;
-		  left: 20%;
-		  transform: translate(-100px, -50%); */
     text-align: left;
     position: absolute;
     margin-top: 0px;
@@ -779,7 +775,23 @@ h2.confidence {
   }
 
   .slider-button {
-    margin: 20px 20px;
+    margin: 14px 20px;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+  }
+  .step-sliders .slick-track {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 880px;
+  }
+  .step-sliders.slick-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .lumedic-phone-section {
