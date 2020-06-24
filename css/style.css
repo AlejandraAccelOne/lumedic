@@ -785,8 +785,8 @@ h2.confidence {
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .innerText {
     position: relative;
-    top: 200px;
     margin: 30px;
+    width: 420px;
   }
 
   .list-ic .slick-slide {
@@ -797,7 +797,7 @@ h2.confidence {
 
   .lumedic-phone-section {
     background: url("../img/slider-bg-mobile.jpg") bottom right no-repeat;
-    min-width: 768px;
+    min-width: 100%;
     background-size: cover;
     height: 1358px;
   }
@@ -805,6 +805,8 @@ h2.confidence {
     background: url("../img/slider-bg-mobile.jpg");
     min-height: 360px;
     background-size: cover;
+    display: flex;
+    justify-content: center;
   }
 
   .lumedic-phone-slider .slick-slide {
@@ -820,9 +822,24 @@ h2.confidence {
   .lumedic-phone-slider .slick-track {
     width: 365px;
     height: 75px;
+    display: flex;
+    justify-content: center;
   }
   .list-ic.slick-slider {
-    margin-top: 60px;
+    margin: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  h2.confidence {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+
+  #mainTitle {
+    font-size: 1.9rem;
+  }
+  .list-ic .slick-track {
     display: flex;
     justify-content: center;
   }
