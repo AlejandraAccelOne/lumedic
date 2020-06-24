@@ -68,14 +68,15 @@ $(document).ready(function(){
   $('.lumedic-phone-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     initialSlide: 1,
     arrows: false,
     dots: false,
     centerMode: false,
     loop: true,
     infinite: true,
-    focusOnSelect:true,
+    focusOnSelect:true
   });
 
   
@@ -92,68 +93,13 @@ $(document).ready(function(){
     infinite: true,
   });
 
+  $('.lumedic-phone-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('li.slick-slide').removeClass('slick-current');
+    $($('li.slick-slide')[nextSlide]).addClass('slick-current');
+  });
 
-//   var $bullets = $('.list-ic li');
-
-//   var texts = [
-//     'Clinical Guidance',
-//     'Lumedic.ID Technology Platform',
-//     'Integrated Solution Management',
-//     'System Integration & Engineering'
-//   ];
-
-//   var controller = new ScrollMagic.Controller();
-//   var $text = $('#mainTitle');
-//   var textChange = new TimelineMax()
-//     .to(".text-loader", 1, {
-//         rotation:'0',
-//         onStart: function () {$text.html(texts[0]); 
-//           $('.list-ic span').css('background-color','white');
-//           $('.list-ic li:eq(0) span').css('background-color','#302c29'); },
-//         onReverseComplete: function () {$text.html(texts[3]);
-//           $('.list-ic span').css('background-color','white');
-//           $('.list-ic li:eq(3) span').css('background-color','#302c29'); }
-//       }
-//     )
-//     .to(".text-loader", 1, {rotation:'90',
-//         onStart: function () {$text.html(texts[1]);
-//           $('.list-ic span').css('background-color','white');
-//           $('.list-ic li:eq(1) span').css('background-color','#302c29'); },
-//         onReverseComplete: function () {$text.html(texts[0]);
-//           $('.list-ic span').css('background-color','white');
-//           $('.list-ic li:eq(0) span').css('background-color','#302c29'); }
-//       }
-//     )
-//     .to(".text-loader", 1, {rotation:'180',
-//         onStart: function () {$text.html(texts[2]);
-//           $('.list-ic span').css('background-color','white');
-//           $('.list-ic li:eq(2) span').css('background-color','#302c29'); },
-//         onReverseComplete: function () {$text.html(texts[1]);
-//           $('.list-ic span').css('background-color','white');
-//           $('.list-ic li:eq(1) span').css('background-color','#302c29'); }
-//       }
-//     )    
-//     .to(".text-loader", 1, {rotation:'270',
-//         onStart: function () {$text.html(texts[3]);
-//           $('.list-ic span').css('background-color','white');
-//           $('.list-ic li:eq(3) span').css('background-color','#302c29'); },
-//         onReverseComplete: function () {$text.html(texts[2]);
-//           $('.list-ic span').css('background-color','white');
-//           $('.list-ic li:eq(2) span').css('background-color','#302c29'); }
-//       }
-//     );  
-
-//   // build scene
-
-// 	var textScroll = new ScrollMagic.Scene({
-// 		triggerElement:'#lumedic-phone',
-// 		triggerHook:0,
-// 		duration:$('#lumedic-phone').height()
-// 	})
-// 	.setTween(textChange)
-//   .setPin('#lumedic-phone')
-//   .addTo(controller);
-  
+  // Init
+  $($('li.slick-slide')[0]).trigger('click');  
 });
 
 
